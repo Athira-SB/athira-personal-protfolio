@@ -1,5 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
-
+import Profile from '../assets/images/profile.png';
 const Hero = () => {
   const { isDark } = useTheme();
 
@@ -21,13 +21,13 @@ const Hero = () => {
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
+                src={Profile}
                 alt="Athira SB - Digital Marketing Specialist"
                 className="w-full h-full object-cover"
               />
               <div 
                 className="absolute inset-0 opacity-20"
-                style={{ backgroundColor: `rgb(var(--color-primary))` }}
+                // style={{ backgroundColor: `rgb(var(--color-primary))` }}
               />
             </div>
           </div>
@@ -51,7 +51,7 @@ const Hero = () => {
             <p className={`text-lg leading-relaxed transition-all duration-300 ${
               isDark ? 'text-slate-300' : 'text-slate-700'
             }`}>
-              As a Digital Marketing Specialist, I drive business expansion by implementing targeted, insight-led online marketing strategies. I help brands enhance their online presence, attract qualified leads, and increase revenue through data-driven digital marketing solutions. With expertise in SEO, paid advertising, content marketing, and social media strategy, I develop campaigns that are aligned with business objectives. My approach combines analytics, creativity, and continuous optimization to deliver measurable results and sustainable growth.
+              As a Digital Marketing Specialist, I help businesses grow through targeted and data-driven online marketing strategies. I focus on improving brand visibility, attracting qualified leads, and increasing revenue through effective digital marketing solutions. My expertise includes SEO, paid advertising, content marketing, and social media strategy to create impactful campaigns. By combining analytics, creativity, and continuous optimization, I deliver measurable results and sustainable business growth. 
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
