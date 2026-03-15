@@ -1,5 +1,7 @@
 import { useTheme } from '../context/ThemeContext';
-
+import facebook from '../assets/images/fb.png';
+import youtube from '../assets/images/YT.png';
+import instagram from '../assets/images/insta.png';
 const Footer = () => {
   const { isDark } = useTheme();
   const currentYear = new Date().getFullYear();
@@ -82,9 +84,9 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-4">
             {[
-              { icon: '📘', link: 'https://facebook.com', label: 'Facebook' },
-              { icon: '📺', link: 'https://youtube.com', label: 'YouTube' },
-              { icon: '📸', link: 'https://instagram.com', label: 'Instagram' },
+              { icon: facebook, link: 'https://www.facebook.com/profile.php?id=61583965953306', label: 'Facebook' },
+              { icon: youtube, link: 'https://www.youtube.com/@PlanetBeautySalon-b1u', label: 'YouTube' },
+              { icon: instagram, link: 'https://www.instagram.com/planetbeautysalon/?hl=en', label: 'Instagram' },
             ].map((social, index) => (
               <a
                 key={index}
@@ -99,7 +101,8 @@ const Footer = () => {
                 }}
                 aria-label={social.label}
               >
-                {social.icon}
+                {/* {social.icon} */}
+                <img src={social.icon} alt={social.label} className="w-6 h-6 object-contain" />
               </a>
             ))}
           </div>
