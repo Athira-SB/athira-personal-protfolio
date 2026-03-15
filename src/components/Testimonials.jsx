@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-
+import user from '../assets/images/user.png';
 const Testimonials = () => {
   const { isDark } = useTheme();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -9,25 +9,25 @@ const Testimonials = () => {
     {
       id: 1,
       text: '"Athira helped us scale our ad campaigns profitably and improved our lead quality significantly. Her data-driven approach and strategic insights made all the difference."',
-      clientName: 'Client Name',
+      clientName: 'John Doe',
       clientTitle: 'CEO, E-commerce Brand',
-      clientImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+      clientImage: user,
       rating: 5
     },
     {
       id: 2,
       text: '"Working with Athira on our SEO strategy was transformative. Our organic traffic increased by 250% in just 6 months. Highly recommended!"',
-      clientName: 'Another Client',
+      clientName: 'Suriya',
       clientTitle: 'Marketing Director, SaaS Company',
-      clientImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+      clientImage: user,
       rating: 5
     },
     {
       id: 3,
       text: '"Athira\'s content marketing strategy helped us establish authority in our niche and build genuine connections with our audience."',
-      clientName: 'Third Client',
+      clientName: 'Nehas',
       clientTitle: 'Founder, Digital Agency',
-      clientImage: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
+      clientImage: user,
       rating: 5
     },
   ];
@@ -150,13 +150,6 @@ const Testimonials = () => {
             </svg>
           </button>
         </div>
-
-        {/* Testimonial Count */}
-        <p className={`text-center mt-8 transition-all duration-300 ${
-          isDark ? 'text-slate-400' : 'text-slate-600'
-        }`}>
-          {currentTestimonial + 1} / {testimonials.length}
-        </p>
       </div>
     </section>
   );
