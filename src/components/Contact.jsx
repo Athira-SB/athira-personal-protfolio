@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
-
+import mail from '../assets/images/mail.png';
+import website from '../assets/images/website.png';
+import linkedin from '../assets/images/linkedinLogo.png';
+import facebook from '../assets/images/fb.png';
+import youtube from '../assets/images/YT.png';
+import instagram from '../assets/images/insta.png';
 const Contact = () => {
   const { isDark } = useTheme();
   const [formData, setFormData] = useState({
@@ -28,9 +33,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { label: 'Email', value: 'your@email.com', icon: '📧', href: 'mailto:your@email.com' },
-    { label: 'Website', value: 'www.yourwebsite.com', icon: '🌐', href: 'https://www.yourwebsite.com' },
-    { label: 'LinkedIn', value: 'linkedin.com/in/yourname', icon: '💼', href: 'https://linkedin.com/in/yourname' },
+    { label: 'Mail', value: 'athirasb2026@gmail.com', icon: mail, href: 'mailto:athirasb2026@gmail.com' },
+    { label: 'Website', value: 'https://athira-sb-personal-portfolio.vercel.app/', icon: website, href: 'https://athira-sb-personal-portfolio.vercel.app/' },
+    { label: 'LinkedIn', value: 'https://www.linkedin.com/in/athirasb/', icon: linkedin, href: 'https://www.linkedin.com/in/athirasb/' },
   ];
 
   return (
@@ -71,7 +76,8 @@ const Contact = () => {
                     isDark ? 'hover:bg-slate-900' : 'hover:bg-slate-100'
                   }`}
                 >
-                  <div className="text-4xl">{info.icon}</div>
+                  {/* <div className="text-4xl">{info.icon}</div> */}
+                  <img src={info.icon} alt={info.label} className="w-10 h-10 object-contain" />
                   <div>
                     <p className={`font-semibold transition-all duration-300 ${
                       isDark ? 'text-white' : 'text-slate-900'
@@ -97,9 +103,9 @@ const Contact = () => {
               </h4>
               <div className="flex gap-4">
                 {[
-                  { name: 'Facebook', icon: '📘', link: 'https://facebook.com' },
-                  { name: 'YouTube', icon: '📺', link: 'https://youtube.com' },
-                  { name: 'Instagram', icon: '📸', link: 'https://instagram.com' },
+                  { name: 'Facebook', icon: facebook, link: 'https://www.facebook.com/profile.php?id=61583965953306' },
+                  { name: 'YouTube', icon: youtube, link: 'https://www.youtube.com/@PlanetBeautySalon-b1u' },
+                  { name: 'Instagram', icon: instagram, link: 'https://www.instagram.com/planetbeautysalon/?hl=en' },
                 ].map((social, index) => (
                   <a
                     key={index}
@@ -111,7 +117,7 @@ const Contact = () => {
                     }`}
                     aria-label={social.name}
                   >
-                    {social.icon}
+                    <img src={social.icon} alt={social.name} className="w-8 h-8 object-contain" />
                   </a>
                 ))}
               </div>
