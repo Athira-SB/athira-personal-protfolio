@@ -2,6 +2,9 @@ import { useTheme } from '../context/ThemeContext';
 import GoogleAds from '../assets/images/Google Ads.png'
 import MetaAds from '../assets/images/Meta Ads.png'
 import LinkedinAds from '../assets/images/Linkedin.png'
+import Facebook from '../assets/images/Facebook.png'
+import Instagram from '../assets/images/Instagram.png'
+import Youtube from '../assets/images/Youtube.png'
 
 const Campaigns = () => {
   const { isDark } = useTheme();
@@ -12,7 +15,7 @@ const Campaigns = () => {
       name: 'Google Ads',
       icon: '🔍',
       image: GoogleAds,
-      link: 'https://google.ads.example.com',
+      link: 'https://ads.google.com/aw/ads?campaignId=23490663740&adGroupId=190407178445&ocid=7633911253&workspaceId=0&euid=1501671312&__u=5013103888&uscid=7633911253&__c=3308818797&authuser=2&subid=in-en-ha-awa-bk-c-c00%21o3-ahpm-0000000200-0000000002%7C-ahpm-0000000179-0000000001~CjwKCAjwjtTNBhB0EiwAuswYhtAdTJtZZE3RgvX7oP9DoGzqi0cxZjnHgGN8hCrn50a7NvAmWw2jbxoCa2AQAvD_BwE~140706620052~aud-2277743709984%3Akwd-94527731~16862088904~592470418766',
       description: 'Optimized search campaigns for maximum ROI'
     },
     {
@@ -20,7 +23,7 @@ const Campaigns = () => {
       name: 'Meta Ads',
       icon: '📱',
       image: MetaAds,
-      link: 'https://meta.ads.example.com',
+      link: 'https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=2566962157014323&nav_entry_point=comet_bookmark&nav_source=comet',
       description: 'Engaging social media campaigns across Meta platforms'
     },
     {
@@ -30,6 +33,30 @@ const Campaigns = () => {
       image: LinkedinAds,
       link: 'https://www.linkedin.com/in/athirasb/',
       description: 'B2B targeted campaigns for professional audiences'
+    },
+    {
+      id: 4,
+      name: 'Facebook',
+      icon: '📘',
+      image: Facebook,
+      link: 'https://www.facebook.com/profile.php?id=61583965953306',
+      description: 'Community-focused content and promotions to build brand awareness and connect with your audience.'
+    },
+    {
+      id: 5,
+      name: 'Instagram',
+      icon: '📸',
+      image: Instagram,
+      link: 'https://www.instagram.com/planetbeautysalon/?hl=en',
+      description: 'Visually engaging posts, reels, and stories that showcase services and attract new customers.'
+    },
+    {
+      id: 6,
+      name: 'YouTube',
+      icon: '▶️',
+      image: Youtube,
+      link: 'https://www.youtube.com/@PlanetBeautySalon-b1u',
+      description: 'Video marketing that highlights tutorials, transformations, and brand storytelling.'
     },
   ];
 
