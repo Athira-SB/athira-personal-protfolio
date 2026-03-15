@@ -1,32 +1,42 @@
 import { useTheme } from '../context/ThemeContext';
-
+import GAnalytics from '../assets/images/GAnalytics.jpg';
+import Manage from '../assets/images/Manage.jpg';
+import GetStarted from '../assets/images/GetStarted.jpg';
+import Dive from '../assets/images/Dive.jpg';
+import UseG4A from '../assets/images/UseG4A.jpg';
 const Certifications = () => {
   const { isDark } = useTheme();
 
   const certifications = [
     {
       id: 1,
-      name: 'Google Ads Certification',
-      image: 'https://images.unsplash.com/photo-1541749060-04248f013fda?w=300&h=300&fit=crop',
+      name: 'Google Analytics Certification',
+      image: GAnalytics,
       issuer: 'Google'
     },
     {
       id: 2,
-      name: 'Google Analytics Certification',
-      image: 'https://images.unsplash.com/photo-1460925895917-adf4e7305002?w=300&h=300&fit=crop',
+      name: 'Manage G4A Data and Learn to Read Reports',
+      image: Manage,
       issuer: 'Google'
     },
     {
       id: 3,
-      name: 'HubSpot Content Marketing Certification',
-      image: 'https://images.unsplash.com/photo-1516321318423-f06f70259b51?w=300&h=300&fit=crop',
-      issuer: 'HubSpot'
+      name: 'Get Started Using Google Analytics',
+      image: GetStarted,
+      issuer: 'Google'
     },
     {
       id: 4,
-      name: 'Meta Blueprint Certification',
-      image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=300&h=300&fit=crop',
-      issuer: 'Meta'
+      name: 'Dive Deeper into G4A Data and Reports',
+      image: Dive,
+      issuer: 'Google'
+    },
+    {
+      id: 5,
+      name: 'Use G4A with other Tools and Data Sources',
+      image: UseG4A,
+      issuer: 'Google'
     },
   ];
 
