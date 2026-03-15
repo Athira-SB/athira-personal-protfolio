@@ -1,6 +1,7 @@
 import { useTheme } from '../context/ThemeContext';
 import { useState } from 'react';
-
+import { MdDarkMode } from 'react-icons/md';
+import { MdLightMode } from 'react-icons/md';
 const ThemeSwitcher = () => {
   const { isDark, toggleDarkMode, colorTheme, setTheme } = useTheme();
   const [showThemeMenu, setShowThemeMenu] = useState(false);
@@ -25,13 +26,9 @@ const ThemeSwitcher = () => {
         aria-label="Toggle dark mode"
       >
         {isDark ? (
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M10 3a1 1 0 011 1v1a1 1 0 11-2 0V4a1 1 0 011-1zM4.217 4.217a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zm11.566 0a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM4 10a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm12 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM4.217 15.783a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zm11.566 0a1 1 0 011.414-1.414l.707.707a1 1 0 11-1.414 1.414l-.707-.707zM10 17a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1z" />
-          </svg>
+          <MdLightMode/>
         ) : (
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-          </svg>
+          <MdDarkMode/>
         )}
       </button>
 
