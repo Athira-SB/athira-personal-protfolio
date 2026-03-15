@@ -1,5 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
-
+import Aboutimg from '../assets/images/about.png';
 const About = () => {
   const { isDark } = useTheme();
 
@@ -30,13 +30,13 @@ const About = () => {
           {/* Left - Image */}
           <div className="flex justify-center">
             <div 
-              className="relative w-80 h-80 rounded-2xl overflow-hidden shadow-xl"
+              className="relative w-80 h-full rounded-2xl overflow-hidden shadow-xl"
               style={{
                 boxShadow: `0 0 40px rgba(var(--color-primary), 0.2)`
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop"
+                src={Aboutimg}
                 alt="About Athira"
                 className="w-full h-full object-cover"
               />
